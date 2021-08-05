@@ -1,0 +1,123 @@
+body{
+  font-size: large;
+}
+
+strong{
+  font-weight: bolder;
+}
+
+.nav{
+  margin-bottom: 150px !important;
+}
+
+.para{
+  line-height:1.75em;
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #3ad554 0%, #066e06 100%);
+  border-image-slice: 1;
+  border-width: 5px;
+  margin:0;
+  padding:40px;
+  counter-increment: section;
+  position:relative;
+  color: black;
+
+  &:before{
+    margin-right: 10px;
+    content: counter(section);
+    position: absolute;
+    border-radius: 50%;
+    padding: 10px;
+    height: 1.35em;
+    width: 1.30em;
+    background-color:#3ad554;
+    text-align: center;
+    line-height: 0.2em;
+    color: white;
+  }
+}
+
+.para:nth-child(odd){
+  border-right: 3px solid;
+  padding-left: 0;
+  &:before{
+    left: 100%;
+    margin-left: -30px;
+    padding-right: 18px;
+  }
+}
+
+.para:nth-child(even){
+  border-left: 3px solid;
+  padding-right: 0;
+
+  &:before{
+    right: 100%;
+    margin-right: -30px;
+    padding-right: 18px;
+  }
+}
+
+.para:first-child{
+  border-top:0;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+}
+.para:last-child{
+  border-bottom-right-radius:0;
+  border-bottom-left-radius: 0;
+}
+
+
+input, button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+.main-div, .loggedin-div {
+  width: 20%;
+  margin: 0px auto;
+  margin-top: 150px;
+  padding: 20px;
+  display: none;
+}
+
+.main-div input {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  padding: 15px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.main-div input:focus {
+  border: 1px solid #777;
+}
+
+.main-div button, .loggedin-div button {
+  background: #6eab0a;
+  color: #fff;
+  border: 1px solid #6eab0a;
+  border-radius: 5px;
+  padding: 15px;
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.main-div button:hover, .loggedin-div button:hover {
+  background: #fff;
+  color: white;
+  border: 1px solid #6eab0a;
+  cursor: pointer;
+}
+
+@import "../materialize-src/sass/materialize";
